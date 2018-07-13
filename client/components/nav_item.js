@@ -1,8 +1,10 @@
 import React from 'react';
 
-const NavItem = ({ label }) => {
+const NavItem = ({ label, link }) => {
   return (
-    <div className="nav-item">{label}</div>
+    <a className="nav-item" href={link}>
+      {label}
+    </a>
   );
 };
 
