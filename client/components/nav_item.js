@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NavItem = ({ label, link }) => {
+const NavItem = ({ label, link, handleClick }) => {
   return (
-    <a className="nav-item" href={link}>
+    <a onClick={() => handleClick(label)} className="nav-item" href={link}>
       {label}
     </a>
   );
