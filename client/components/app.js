@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import NavItem from './nav_item';
 import Icon from './icon';
 import AboutMe from './about_me';
+import Skills from './skills';
 
 class App extends Component {
   constructor(props) {
@@ -13,19 +14,21 @@ class App extends Component {
   componentDidMount() {
     this.navNodes = {
      'About Me': this.aboutMe,
+     'Skills': this.skills,
     }
   }
 
   handleNavItemClick(label) {
+        console.log(this.navNodes[label])
     if(this.navNodes[label]) {
-      this.navNodes[label].scrollIntoView();
+      this.navNodes[label].scrollIntoView(false);
       window.scrollBy(0, -200);
     }
   }
 
   render() {
     let navItems = ['About Me', 'Resume', 'Skills', 'Projects', 'Links', 'Contact Me'];
-    let navLinks = [null,'./Melvin_Estrada_Resume.pdf','/','/','/','mailto:melvinlouie.estrada@gmail.com'];
+    let navLinks = [null,'./Melvin_Estrada_Resume.pdf', null,'/','/','mailto:melvinlouie.estrada@gmail.com'];
     let icons = ['fab fa-github-square', 'fab fa-linkedin', 'fas fa-envelope'];
     let details = ['https://github.com/melvinest', 'https://www.linkedin.com/in/melvin-estrada/', 'mailto:melvinlouie.estrada@gmail.com']
     return (
@@ -52,14 +55,11 @@ class App extends Component {
           </div>
         </div>
         <div className="reel">
-          <div ref={(node) => {this.aboutMe = node}}>
+          <div ref={(node) => { this.aboutMe = node }}>
             <AboutMe />
-            <AboutMe />
-            <AboutMe />
-            <AboutMe />
-            <AboutMe />
-            <AboutMe />
-            <AboutMe />
+          </div>
+          <div ref={(node) => { this.skills = node }} >
+            <Skills />
           </div>
         </div>
       </div>

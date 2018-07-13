@@ -29,7 +29,7 @@ class Icon extends Component {
         onMouseLeave={() => this.handleMouseLeave()}
         className="icon-cont"
       >
-        <i className={`${this.props.name} icon`} />
+        <i className={`${this.props.name} skill-icon`} />
         {this.state.showToolTip ? (<div className="tooltip">{this.props.detail}</div>) : null}
       </a>
     );
