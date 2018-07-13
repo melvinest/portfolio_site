@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+.banner {
+  background-color: #6d695c;
+  background-image:
+  repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+  repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+  linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+  linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+  background-size: 70px 120px;
+  height: 150px;
+  width: 100%;
+}
+
+.name {
+  font-size: 75px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  height: 120px;
+  line-height: 125px;
+  text-align: center;
+}
+
+.description {
+  font-size: 20px;
+  color: black;
+  height: 30px;
+  line-height: 20px;
+  text-align: center;
+  color:  white;
+  text-shadow: 2px 2px 4px #000000;
+  line-height: 5px;
+}
+
+.nav-bar {
+  height: 37px;
+  background-color: #F6F6F6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  line-height: 37px;
+  padding: 0 10px 0 10px;
+}
+
+.nav-item:hover {
+  background-color: #7B7B7B;
+  color: white;
+}

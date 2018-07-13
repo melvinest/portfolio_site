@@ -1,0 +1,46 @@
+{
+  "name": "porfolio_site",
+  "version": "1.0.0",
+  "description": "portfolio site of melvin estrada",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js",
+    "start": "node client/index.js",
+    "build": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melvinest/porfolio_site.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "melvin estrada",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/melvinest/porfolio_site/issues"
+  },
+  "homepage": "https://github.com/melvinest/porfolio_site#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "reac": "0.0.0",
+    "react-dom": "^16.4.1"
+  }
+}
