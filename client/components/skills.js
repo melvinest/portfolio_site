@@ -6,9 +6,9 @@ const Skills = () => {
   let icons = ['fas fa-laptop', 'fas fa-server', 'fas fa-database', 'fas fa-wrench']
   let contents = [
     'JavaScript, ES6/7, HTML/CSS, ReactJS, Redux, AngularJS, Backbone.js, jQuery, Flow Router',
-    'NodeJS/ExpressJS, Python, Redis, REST',
+    'NodeJS/ExpressJS, Python, MeteorJS, Redis, REST',
     'MongoDB/Mongoose, MySQL, PostgreSQL',
-    'Underscore, Webpack, Jest/Enzyme, Mocha/Chai, Docker, Git, VBA, Matlab, AWS, Heroku, MeteorJS'
+    'Underscore, Webpack, Jest/Enzyme, Mocha/Chai, Docker, Git, VBA, Matlab, AWS, Heroku'
   ];
   return (
     <div className="skills-cont">
