@@ -71,7 +71,7 @@ class App extends Component {
             )}
           </div>
           <div className="nav-bar">
-            <NavItem label="Melvin Estrada" addStyle="nav-name"/>
+            {this.state.isScrolled ? (<NavItem label="Melvin Estrada  ==>" addStyle="nav-name"/>) : null}
             {navItems.map((label, i) => (
               <NavItem 
                 key={label} 
