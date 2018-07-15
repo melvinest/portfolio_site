@@ -23,7 +23,7 @@ class Icon extends Component {
   render() {
     return (
       <a 
-        target="_blank"
+        target={this.props.name === 'fas fa-envelope' ? null : "_blank"}
         href={this.props.detail} 
         onMouseEnter={() => this.handleMouseEnter()} 
         onMouseLeave={() => this.handleMouseLeave()}
