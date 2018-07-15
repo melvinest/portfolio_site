@@ -14,6 +14,11 @@ class App extends Component {
     this.skills = null;
     this.projects = null;
     this.contactMe = null;
+    this.banner = null;
+    this.state = {
+      bannerHeight: 150,
+      isScrolled: false,
+    };
   }
 
   componentDidMount() {
@@ -23,6 +28,11 @@ class App extends Component {
      'Projects': this.projects,
      'Contact Me': this.contactMe,
     }
+    document.addEventListener('scroll', () => this.handleScroll());
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', () => this.handleScroll());
   }
 
   handleNavItemClick(label) {
@@ -33,6 +43,12 @@ class App extends Component {
     }
   }
 
+  handleScroll() {
+    const bannerHeight = Math.max(150 - document.querySelector('html').scrollTop, 0);
+    const isScrolled = bannerHeight !== 150;
+    this.setState({ bannerHeight, isScrolled });
+  }
+
   render() {
     let navItems = ['About Me', 'Resume', 'Skills', 'Projects', 'Contact Me'];
     let navLinks = [null,'./Melvin_Estrada_Resume.pdf', null, null, null];
@@ -41,16 +57,21 @@ class App extends Component {
     return (
       <div>
         <div className="header">
-          <div className="banner">
-            <div className="name">
-              Melvin Estrada
-              <div className="description">Software Engineer</div>
-            </div>
-            <div className="icon-container">
-              {icons.map((name, i) => (<Icon key={name} name={name} detail={details[i]} />))}
-            </div>
+          <div ref={(node) => { this.banner = node }} className="banner" style={{ height: this.state.bannerHeight }}>
+            {this.state.isScrolled ? null : (
+              <div className="banner-container">
+                <div className="name">
+                  Melvin Estrada
+                  <div className="description">Software Engineer</div>
+                </div>
+                <div className="icon-container">
+                  {icons.map((name, i) => (<Icon key={name} name={name} detail={details[i]} />))}
+                </div>
+              </div>
+            )}
           </div>
           <div className="nav-bar">
+            <NavItem label="Melvin Estrada" addStyle="nav-name"/>
             {navItems.map((label, i) => (
               <NavItem 
                 key={label} 

@@ -17,8 +17,10 @@ body {
   linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
   linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
   background-size: 70px 120px;
-  height: 150px;
   width: 100%;
+}
+
+.banner-container {
   display: flex;
   justify-content: center;
 }
@@ -53,11 +55,21 @@ body {
   min-width: 525px;
 }
 
+.nav-name {
+  cursor: auto !important;
+}
+
+.nav-name:hover {
+  background-color: transparent !important;
+  color: black !important;
+}
+
 .nav-item {
   line-height: 37px;
   padding: 0 10px 0 10px;
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-link {
