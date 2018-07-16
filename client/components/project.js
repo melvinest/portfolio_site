@@ -4,7 +4,7 @@ const Project = ({ title, pic, description, achievements, tech, github, url }) =
   return (
     <div className="prj-container">
       <div className="prj-image-container">
-        <a href={url || github}><img className="prj-image" src={pic} /></a>
+        <a href={pic}><img className="prj-image" src={pic} /></a>
       </div>
       <div className="prj-detail-container">
         <div className="prj-name">{title}</div>

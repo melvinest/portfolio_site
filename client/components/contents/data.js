@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: 'Welp',
-    pic: './assets/welp.jpeg',
+    pic: './assets/welp.png',
     description: 'Online business directory with user reviews and ratings',
     achievements: ['Built server using ExpressJS and MongoDB that can handle search, sort and paging queries', 'Utilized reusability of ReactJS components to generate repeating elements such as dropdowns, review/user entry and pagination', 'Developed a proxy server that merged all microservices making them accessible via a single endpoint'],
     tech: 'ReactJS, NodeJS, ExpressJS, MongoDB',
