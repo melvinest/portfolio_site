@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test.js",
     "start": "node server/index.js",
-    "build": "webpack -w"
+    "build": "webpack -w",
+    "heroku-postbuild": "webpack"
   },
   "repository": {
     "type": "git",
